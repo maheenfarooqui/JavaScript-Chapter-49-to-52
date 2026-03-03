@@ -39,11 +39,17 @@ var sAge = document.getElementById("age");
 var sClass = document.getElementById("userClass");
 var tBody = document.getElementById("tBody");
 var userD = document.getElementById("user");
+var rollNum = document.getElementById("num");
+var index = 0;
+
 function addStuden(){
+    index++;
 tBody.innerHTML +=`<tr>
+ <td>${index}</td>
         <td>${sName.value}</td>
         <td>${sClass.value}</td>
         <td>${sAge.value}</td>
+        <td>${rollNum.value}</td>
         <td>
           <button class="edit-btn" onclick="editRow()">Edit</button>
           <button class="del-btn" onclick="deleteRow(this)">Delete</button>
