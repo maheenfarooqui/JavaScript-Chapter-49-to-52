@@ -59,6 +59,12 @@ body{
 .green { color:  #8DC447;
  
 }
+h1{
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+
 
 .authForm input {
   width: 100%;
@@ -142,15 +148,17 @@ body{
     background-color: white;
     color: #120E2F;
 }
-/* Section Centering */
+
 section {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
 }
 
-/* Table Styling */
+
 .student-table {
   width: 90%;
   max-width: 900px;
@@ -162,8 +170,6 @@ section {
   border: 1px solid rgba(141, 196, 71, 0.1);
   font-family: "Poppins", sans-serif;
 }
-
-/* Table Head */
 .student-table thead {
   background-color: rgba(141, 196, 71, 0.1);
 }
@@ -176,19 +182,18 @@ section {
   border-bottom: 1px solid rgba(141, 196, 71, 0.2);
 }
 
-/* Table Body */
 .student-table td {
   padding: 12px 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Row Hover Effect */
+
 .student-table tbody tr:hover {
   background-color: rgba(141, 196, 71, 0.08);
   transition: 0.3s;
 }
 
-/* Delete Button */
+
 .del-btn {
   background-color: #8DC447;
   color: #120E2F;
@@ -202,5 +207,22 @@ section {
 
 .del-btn:hover {
   background-color: white;
+  color: #120E2F;
+}
+/* Edit Button */
+.edit-btn {
+  background-color: transparent;
+  color: #8DC447;
+  border: 1px solid #8DC447;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 8px;
+  transition: 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: #8DC447;
   color: #120E2F;
 }

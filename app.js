@@ -30,3 +30,33 @@ function toggleText(){
    }
     
 }
+function deleteRow(e){
+    e.parentElement.parentElement.style.display ="none"
+
+}
+var sName = document.getElementById("sname");
+var sAge = document.getElementById("age");
+var sClass = document.getElementById("userClass");
+var tBody = document.getElementById("tBody");
+var userD = document.getElementById("user");
+function addStuden(){
+tBody.innerHTML +=`<tr>
+        <td>${sName.value}</td>
+        <td>${sClass.value}</td>
+        <td>${sAge.value}</td>
+        <td>
+          <button class="edit-btn" onclick="editRow()">Edit</button>
+          <button class="del-btn" onclick="deleteRow(this)">Delete</button>
+        </td>
+      </tr>
+     `
+      ;
+
+
+
+}
+function editRow(){
+   
+  
+    
+}

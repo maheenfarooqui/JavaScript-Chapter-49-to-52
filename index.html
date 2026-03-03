@@ -60,110 +60,31 @@ an edit button. On click on delete button entire row should
 be deleted. On click on edit button, a hidden form will
 appear with the values of that row. -->
 <section>
-  <table class="student-table">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Class</th>
-            <th>Age</th>
-            <th>Action</th>
-          </tr>
-        </thead>
+   <form class="authForm" id="user"> 
+    <h1>Student <span class="green">Details</span></h1>
+        <input type="name" placeholder="Name" id="sname" required />
+        <input type="text" placeholder="Class" id="userClass" required />
+        <input type="text" placeholder="Age" id="age" required />
 
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Ali</td>
-            <td>10</td>
-            <td>15</td>
-            <td>
-              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Sara</td>
-            <td>9</td>
-            <td>14</td>
-            <td>
-              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Ahmed</td>
-            <td>8</td>
-            <td>13</td>
-            <td>
-              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Ayesha</td>
-            <td>10</td>
-            <td>15</td>
-            <td>
-              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Hassan</td>
-            <td>7</td>
-            <td>12</td>
-            <td>
-              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>Fatima</td>
-            <td>9</td>
-            <td>14</td>
-            <td>
-              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>Usman</td>
-            <td>8</td>
-            <td>13</td>
-            <td>
-              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>Noor</td>
-            <td>6</td>
-            <td>11</td>
-            <td>
-              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>Zain</td>
-            <td>7</td>
-            <td>12</td>
-            <td>
-              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>Mariam</td>
-            <td>10</td>
-            <td>15</td>
-            <td>
-              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+        <button type="button" class="authBtn" onclick="addStuden()">
+          Submit
+        </button>
+      </form>
+  <table class="student-table">
+     
+        <thead>
+      <tr>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Age</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody id="tBody">     
+     </tbody>
+    
+  </table>
 </section>
     <script src="app.js"></script>
   </body>
