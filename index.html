@@ -1,43 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>chapter 49 to 52</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- 1. Create a signup form and display form data in your web
 page on submission. -->
-<div class="authContainer">
-      <form class="authForm">
+    <div class="authContainer">
+      <form class="authForm" id="form">
         <h2>Jion<span class="green"> NexMart</span></h2>
         <p>Create an account to start selling</p>
-        <input 
-          type="name" 
-          placeholder="Name" 
-          id="name"
-          
-          required 
-        />
-        <input 
-          type="email" 
-          placeholder="Email Address" 
-          id="email"
-          required 
-        />
-        <input 
-          type="password" 
-          placeholder="Password" 
-          id="password"
-          required 
-        />
-        
-        <button type="submit" class="authBtn">Login</button>
+        <input type="name" placeholder="Name" id="name" required />
+        <input type="email" placeholder="Email Address" id="email" required />
+        <input type="password" placeholder="Password" id="password" required />
 
-        
+        <button type="button" class="authBtn" onclick="submitForm()">
+          Login
+        </button>
       </form>
+      <div id="box"></div>
     </div>
+    <!-- 2. Suppose in your webpage there is content area in which
+you have entered your item details, but user can only see
+some details on first look. When user clicks on “Read
+more” button, full detail of that particular item will be
+displayed. -->
+    <section class="content-area">
+      <div class="item-card">
+        <img
+          src="https://images.unsplash.com/photo-1603302576837-37561b2e2302"
+          alt="Gaming Laptop"
+          class="item-img"
+        />
+        <h2 class="item-title">Gaming Laptop</h2>
+
+        <p class="short-text">
+          This high-performance gaming laptop is designed for speed and power.
+        </p>
+
+        <p class="full-text" id="moreText1">
+          It comes with the latest Intel processor, 16GB RAM, 1TB SSD storage,
+          and RTX graphics card. The cooling system ensures smooth gameplay even
+          during long sessions. Perfect for gamers and developers.
+        </p>
+
+        <button id="toggle" class="read-btn" onclick="toggleText()">
+          Read More
+        </button>
+      </div>
+    </section>
+    <!-- 3. In previous assignment you have created a tabular data
+using javascript. Let’s modify that. Create a form which
+takes student’s details and show each student detail in
+table. Each row of table must contain a delete button and
+an edit button. On click on delete button entire row should
+be deleted. On click on edit button, a hidden form will
+appear with the values of that row. -->
+<section>
+  <table class="student-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Age</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Ali</td>
+            <td>10</td>
+            <td>15</td>
+            <td>
+              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Sara</td>
+            <td>9</td>
+            <td>14</td>
+            <td>
+              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Ahmed</td>
+            <td>8</td>
+            <td>13</td>
+            <td>
+              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Ayesha</td>
+            <td>10</td>
+            <td>15</td>
+            <td>
+              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Hassan</td>
+            <td>7</td>
+            <td>12</td>
+            <td>
+              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Fatima</td>
+            <td>9</td>
+            <td>14</td>
+            <td>
+              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Usman</td>
+            <td>8</td>
+            <td>13</td>
+            <td>
+              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Noor</td>
+            <td>6</td>
+            <td>11</td>
+            <td>
+              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Zain</td>
+            <td>7</td>
+            <td>12</td>
+            <td>
+              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Mariam</td>
+            <td>10</td>
+            <td>15</td>
+            <td>
+              <button class="del-btn" onclick="deleteRow(this)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</section>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
