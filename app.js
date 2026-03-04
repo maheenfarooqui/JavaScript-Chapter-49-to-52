@@ -60,10 +60,10 @@ tBody.innerHTML +=`<tr>
      `
   }
       else{
-        editInput.children[1].innerText =sName.value;
-        editInput.children[2].innerText =sClass.value;
-        editInput.children[3].innerText =sAge.value;
-        editInput.children[4].innerText =rollNum.value;
+        editInput.children[0].innerText =sName.value;
+        editInput.children[1].innerText =sClass.value;
+        editInput.children[2].innerText =sAge.value;
+        editInput.children[3].innerText =rollNum.value;
       }
       editInput = "";
       sName.value="";
@@ -78,10 +78,10 @@ tBody.innerHTML +=`<tr>
 
 function editRow(e){
   var myTr =e.parentElement.parentElement;
-  var uN = myTr.children[1].innerText;
-  var uC = myTr.children[2].innerText;
-  var uA = myTr.children[3].innerText;
-  var uR = myTr.children[4].innerText;
+  var uN = myTr.children[0].innerText;
+  var uC = myTr.children[1].innerText;
+  var uA = myTr.children[2].innerText;
+  var uR = myTr.children[3].innerText;
   sName.value = uN;
   sClass.value =uC;
   sAge.value=uA;
