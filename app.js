@@ -41,9 +41,11 @@ var tBody = document.getElementById("tBody");
 var userD = document.getElementById("user");
 var rollNum = document.getElementById("num");
 var index = 0;
+var editInput = "";
 
 function addStuden(){
-    index++;
+  if(editInput === ""){
+        index++;
 tBody.innerHTML +=`<tr>
  <td>${index}</td>
         <td>${sName.value}</td>
@@ -51,18 +53,41 @@ tBody.innerHTML +=`<tr>
         <td>${sAge.value}</td>
         <td>${rollNum.value}</td>
         <td>
-          <button class="edit-btn" onclick="editRow()">Edit</button>
+          <button class="edit-btn" onclick="editRow(this)">Edit</button>
           <button class="del-btn" onclick="deleteRow(this)">Delete</button>
         </td>
       </tr>
      `
-      ;
+  }
+      else{
+        editInput.children[1].innerText =sName.value;
+        editInput.children[2].innerText =sClass.value;
+        editInput.children[3].innerText =sAge.value;
+        editInput.children[4].innerText =rollNum.value;
+      }
+      editInput = "";
+      sName.value="";
+      sClass.value="";
+      sAge.value="";
+      rollNum.value="";
+  }
 
 
 
-}
-function editRow(){
-   
+
+
+function editRow(e){
+  var myTr =e.parentElement.parentElement;
+  var uN = myTr.children[1].innerText;
+  var uC = myTr.children[2].innerText;
+  var uA = myTr.children[3].innerText;
+  var uR = myTr.children[4].innerText;
+  sName.value = uN;
+  sClass.value =uC;
+  sAge.value=uA;
+  rollNum.value=uR;
+
+  editInput = myTr;
   
     
 }
